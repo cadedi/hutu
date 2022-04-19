@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>填信息</title>
+</head>
+
+<body>
+  <div style="color: red;">注：所有信息必须写全称，如班级格式为：信息管理与信息系统16(4)</div>
+  姓名：<input type="text" id="name" /><br>
+  学号：<input type="text" id="number" /><br>
+  学院：<input type="text" id="xy" /><br>
+  专业：<input type="text" id="zy" /><br>
+  班级：<input type="text" id="bj" /><br>
+  外出时间：<input type="time" id="out" /><br>
+  返校时间：<input type="time" id="back" /><br>
+
+  <input type="button" value="提交" onClick="test()">
+</body>
+<script>
+  const name = document.getElementById('name')
+  const number = document.getElementById('number')
+  const xy = document.getElementById('xy')
+  const zy = document.getElementById('zy')
+  const bj = document.getElementById('bj')
+  const out = document.getElementById('out')
+  const back = document.getElementById('back')
+
+  function test() {
+    sessionStorage.setItem('name', name.value)
+    sessionStorage.setItem('number', number.value)
+    sessionStorage.setItem('xy', xy.value)
+    sessionStorage.setItem('zy', zy.value)
+    sessionStorage.setItem('bj', bj.value)
+    sessionStorage.setItem('out', out.value)
+    sessionStorage.setItem('back', back.value)
+    window.location.href = './main.html'
+  }
+</script>
+
+</html>
